@@ -52,17 +52,16 @@ S
 
 '''
 
-import logging
-import numpy as np
+#==============================================================================
 
+import numpy as np
 import pypdf
 
-from biosignalml.data import Clock, TimeSeries
-from biosignalml.formats.hdf5 import HDF5Recording
-
+#==============================================================================
 
 POINTS2MM = 25.4/72.0
 
+#==============================================================================
 
 class GraphicsMap(object):
 #=========================
@@ -76,6 +75,7 @@ class GraphicsMap(object):
     return (float(self._matrix[0])*point[0] + self._matrix[2],
             float(self._matrix[1])*point[1] + self._matrix[3])
 
+#==============================================================================
 
 class ECG_PDF(object):
 #=====================
@@ -311,15 +311,20 @@ BT    Begin text
 ET    End text
 """
 
+#==============================================================================
 
 if __name__ == '__main__':
 #-------------------------
 
-  import sys, os
+  import logging
   import math
+  import sys, os
 
+  from biosignalml.data import Clock, TimeSeries
+  from biosignalml.formats.hdf5 import HDF5Recording
   from biosignalml.units import UNITS
 
+  #==============================================================================
 
   logging.basicConfig(format='%(asctime)s: %(message)s')
   logging.getLogger().setLevel('DEBUG')
@@ -360,7 +365,7 @@ if __name__ == '__main__':
   #beat_uri = uri + '/beats'
   #hdf5.create_clock(beat_uri, units='seconds', times=pdf.beats)
 
-
+#==============================================================================
 
   """
     hdf5.create_clock(annclock, dtype='i8', scale=1.0/framerate)
@@ -401,3 +406,5 @@ if __name__ == '__main__':
     h5.store_metadata(turtle, rdf.Format.TURTLE)
 
   """
+
+#==============================================================================
