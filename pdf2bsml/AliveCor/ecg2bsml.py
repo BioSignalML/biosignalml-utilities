@@ -185,12 +185,12 @@ class ECG_PDF(object):
   def __init__(self, pdf_file):
   #----------------------------
     self._reader = pypdf.PdfReader(pdf_file)
-    self._page = self._reader.getPage(0)
+    self._page = self._reader.pages[0]
     self._bounds = [0.0, 0.0,  0.0, 0.0]   # x, y, w, h
     self._text = [ ]
     self._ecg = None
     self._beats = None
-    self._scan(self._page.getContents().getData().decode('utf-8'))
+    self._scan(self._page.get_contents().get_data().decode('utf-8'))
 
 
   def _scan(self, data):
