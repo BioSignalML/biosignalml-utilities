@@ -2,12 +2,12 @@
 
 [[package]]
 name = "biosignalml"
-version = "0.7.1a1"
+version = "0.7.1a2"
 description = ""
 optional = false
 python-versions = ">=3.10,<3.13"
 files = [
-    {file = "biosignalml-0.7.1a1-py3-none-any.whl", hash = "sha256:bfc9a41646b7da7762f6b0e551e017f18eda7640757255be878239c8910ec6b8"},
+    {file = "biosignalml-0.7.1a2-py3-none-any.whl", hash = "sha256:d1db92f9865d51490a385469918144c4f000fddcc182a827e9f1908ac366c744"},
 ]
 
 [package.dependencies]
@@ -26,7 +26,7 @@ ws4py = ">=0.5.1,<0.6.0"
 
 [package.source]
 type = "url"
-url = "https://github.com/BioSignalML/biosignalml-python/releases/download/v0.7.1-a.1/biosignalml-0.7.1a1-py3-none-any.whl"
+url = "https://github.com/BioSignalML/biosignalml-python/releases/download/v0.7.1-a.2/biosignalml-0.7.1a2-py3-none-any.whl"
 
 [[package]]
 name = "certifi"
@@ -1242,4 +1242,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.13"
-content-hash = "791462d2095287e28d7dab50d511d9b28350b0cc7b3afa7be42db85fce781efd"
+content-hash = "f5a82e268589ed56f2984e34b6b785c4c1e3a35006649979fc88d62eddc6ea0a"
